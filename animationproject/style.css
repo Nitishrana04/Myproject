@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.contanier{
+    height: 100vh;
+    background-color: red;
+    background: url('../animationproject/background.jpg');
+    background-position: 150px 0;
+    position: relative;
+    animation: bgmove 5s ;
+}
+
+.rocket{
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+   /* animation-name: rocketmove;
+    animation-duration: 5s; */
+    animation: rocketmove 2s ease-in-out infinite ,
+     rocketrun 2s ease-in-out 16s forwards ,
+     rockettomoon 2s ease-in-out 18s forwards;
+    
+}
+
+.rocketimg{
+    
+    transform: rotate(42deg);
+    
+}
+
+    
+.animeimg{
+    height: 300px;
+    position:relative; 
+    top: 460px;  
+    left: -200px; 
+    animation: animemove 3s ease-in-out  infinite , 
+    animeforward  4s ease-in-out  4s forwards ,
+    animeinrocket  2s ease-in-out  12s forwards; 
+}
+
+
+
+@keyframes rocketmove{
+    0%{
+        top: 50%;
+    }
+    50%{
+        top: 45%;
+    }
+    100%{
+        top: 50%;
+    }
+}
+
+@keyframes bgmove {
+    0%{
+
+    }
+    100%{
+        background-position: 1800% 0;
+    }
+    
+}
+
+
+@keyframes animemove {
+   50% {
+        top: 1750px;
+    }
+}
+
+@keyframes animeforward {
+    from{
+        left:-200px ;
+    }
+    to{
+        left: 1300px;
+    }
+    
+}
+
+@keyframes animeinrocket {
+    100%{
+        left: 1980px;
+        transform: scale(0);
+    }
+    
+}
+@keyframes rocketrun {
+    100%{
+            transform: rotate(-86deg);
+    }
+}
+
+@keyframes rockettomoon {
+    100%{
+        top: -400px;
+    }
+    
+}
